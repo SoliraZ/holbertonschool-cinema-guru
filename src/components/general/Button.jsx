@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './general.css'
 
-function Button({ label, className, onClick, icon }) {
+function Button({ label, className, onClick, icon, type = 'button' }) {
   return (
     <button
-      type="button"
+      type={type}
       className={`button ${className || ''}`.trim()}
       onClick={onClick}
     >

@@ -23,7 +23,7 @@ function Register({ username, password, setUsername, setPassword }) {
         setValue={setPassword}
         icon={faKey}
       />
-      <Button label="Sign Up" className="auth-submit" icon={faPlus} />
+      <Button label="Sign Up" className="auth-submit" icon={faPlus} type="submit" />
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import axios from 'axios'
 import Button from '../../components/general/Button'
 import Login from './Login'
 import Register from './Register'
@@ -15,8 +16,28 @@ function Authentication({ setIsLoggedIn, setUserUsername }) {
     setPassword('')
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    const route = _switch ? 'login' : 'register'
+
+    axios
+      .post(`http://localhost:8000/api/auth/${route}`, {
+        username,
+        password,
+      })
+      .then((response) => {
+        localStorage.setItem('accessToken', response.data.accessToken)
+        setUserUsername(username)
+        setIsLoggedIn(true)
+      })
+      .catch((error) => {
+        console.error(error)
+      })
+  }
+
   return (
-    <form className="authentication" onSubmit={(event) => event.preventDefault()}>
+    <form className="authentication" onSubmit={handleSubmit}>
       <div className="auth-header">
         <Button
           label="Sign In"

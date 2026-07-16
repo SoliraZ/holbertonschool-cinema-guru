@@ -1,0 +1,81 @@
+.authentication {
+  width: 450px;
+  max-width: calc(100vw - 32px);
+  margin: auto;
+  background-color: #ffffff;
+  color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Header tabs ---------- */
+.auth-header {
+  display: flex;
+  width: 100%;
+}
+
+.auth-header .button {
+  flex: 1;
+  height: 48px;
+  border: none;
+  border-radius: 0;
+  background-color: #bb000e;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.auth-header .button.selected {
+  background-color: #e31c25;
+}
+
+.auth-header .button:hover {
+  background-color: #e31c25;
+}
+
+/* ---------- Form body (Login / Register) ---------- */
+.auth-body {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 40px 48px 24px;
+}
+
+.auth-body h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 19px;
+  line-height: 19px;
+  font-weight: 500;
+  color: #1c1c1c;
+}
+
+/* Inputs inside the white card use the light theme */
+.authentication .input label {
+  color: #1c1c1c;
+}
+
+.authentication .input input {
+  background-color: #ffffff;
+  color: #1c1c1c;
+}
+
+.authentication .input-icon {
+  color: rgba(227, 28, 37, 0.5);
+}
+
+/* ---------- Submit button ---------- */
+.auth-submit {
+  align-self: flex-end;
+  min-width: 104px;
+  height: 34px;
+  border: none;
+  border-radius: 3px;
+  background-color: #bb000e;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.auth-submit:hover {
+  background-color: #e31c25;
+}

@@ -55,8 +55,7 @@
 }
 
 .input input:focus {
-  border: 1px solid var(--cg-red);
-  border-bottom: 1px solid var(--cg-red);
+  border-bottom-color: var(--cg-red);
 }
 
 /* Light theme variant via className */

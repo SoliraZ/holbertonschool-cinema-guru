@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;400&display=swap');
+
+:root {
+  --cg-red: #e31c25;
+  --cg-red-underline: #bb000e;
+  --cg-dark: #2c2c2c;
+  --cg-bg: #222222;
+  --cg-text-dark: #1c1c1c;
+  --cg-white: #ffffff;
+  --cg-placeholder-dark: rgba(255, 255, 255, 0.6);
+  --cg-placeholder-light: rgba(44, 44, 44, 0.6);
+}
+
+/* ---------- Input ---------- */
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-icon {
+  width: 16px;
+  height: 16px;
+  color: #888888;
+}
+
+.input label {
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--cg-white);
+}
+
+.input input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 21px;
+  padding: 0 4px;
+  border: none;
+  border-bottom: 1px solid var(--cg-red-underline);
+  outline: none;
+  background-color: var(--cg-dark);
+  color: var(--cg-white);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.input input:focus {
+  border: 1px solid var(--cg-red);
+  border-bottom: 1px solid var(--cg-red);
+}
+
+/* Light theme variant via className */
+.input.light label {
+  color: var(--cg-text-dark);
+}
+
+.input.light .input-icon {
+  color: #888888;
+}
+
+.input.light input {
+  background-color: var(--cg-white);
+  color: var(--cg-text-dark);
+}
+
+/* Error variant via className */
+.input.error label,
+.input.error .input-icon {
+  color: var(--cg-red);
+}
+
+.input.error input {
+  border: 1px solid var(--cg-red);
+  background-color: var(--cg-dark);
+}
+
+.input.error.light input {
+  background-color: var(--cg-white);
+}
+
+/* ---------- SelectInput ---------- */
+.select-input {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.select-input label {
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--cg-white);
+}
+
+.select-input select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 21px;
+  padding: 0 4px;
+  border: none;
+  border-bottom: 1px solid var(--cg-red-underline);
+  border-radius: 0;
+  outline: none;
+  background-color: var(--cg-dark);
+  color: var(--cg-white);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.select-input select:focus {
+  border-bottom-color: var(--cg-red);
+}
+
+.select-input select option {
+  background-color: var(--cg-dark);
+  color: var(--cg-white);
+}
+
+/* ---------- Button ---------- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 24px;
+  padding: 2px 14px;
+  border: 1px solid var(--cg-red);
+  border-radius: 15px;
+  background-color: transparent;
+  color: var(--cg-white);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.button:hover,
+.button.selected {
+  background-color: var(--cg-red);
+  color: var(--cg-white);
+}
+
+.button-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* ---------- SearchBar ---------- */
+.search-bar {
+  box-sizing: border-box;
+  width: 535px;
+  max-width: 100%;
+  height: 28px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  background-color: var(--cg-dark);
+  color: var(--cg-white);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.search-bar::placeholder {
+  color: var(--cg-placeholder-dark);
+}
+
+.search-bar.light {
+  background-color: var(--cg-white);
+  color: var(--cg-text-dark);
+}
+
+.search-bar.light::placeholder {
+  color: var(--cg-placeholder-light);
+}

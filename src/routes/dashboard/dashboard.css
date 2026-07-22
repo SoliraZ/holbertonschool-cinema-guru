@@ -13,3 +13,56 @@
   flex: 1;
   min-height: 0;
 }
+
+.page {
+  flex: 1;
+  min-width: 0;
+  padding: 24px 32px 40px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.page-title {
+  margin: 24px auto 40px;
+  width: fit-content;
+  max-width: 100%;
+  text-align: center;
+  font-size: 63px;
+  line-height: 1.1;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-bottom: 5px solid #e31c25;
+  padding-bottom: 8px;
+}
+
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 16px;
+}
+
+.load-more-button {
+  min-width: 117px;
+  height: 34px;
+  border-radius: 3px;
+  background-color: #bb000e;
+  border-color: #bb000e;
+  color: #ffffff;
+}
+
+.load-more-button:hover {
+  background-color: #e31c25;
+  border-color: #e31c25;
+}
+

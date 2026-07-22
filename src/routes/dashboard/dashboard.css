@@ -7,3 +7,9 @@
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
 }
+
+.dashboard-main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
